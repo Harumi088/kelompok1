@@ -18,8 +18,6 @@ bool validStasiun(int stasiun) {
     return stasiun >= 1 && stasiun <= 5;
 }
 
-
-
 int main() {
     int stasiunAwal, stasiunTujuan;
 
@@ -39,7 +37,7 @@ int main() {
     
     cout << "Stasiun awal: ";
     cin >> stasiunAwal;
-
+    
     if (!validStasiun(stasiunAwal)) {
         cout << "Stasiun yang anda pilih tidak ada." << endl;
         return 1;
@@ -52,8 +50,8 @@ int main() {
         cout << "Stasiun yang anda tuju tidak ada." << endl;
         return 1;
     }
-
-        // Menghitung jumlah stasiun yang dilewati termasuk stasiun awal
+    
+    // Menghitung jumlah stasiun yang dilewati termasuk stasiun awal
     int jumlahStasiun = abs(stasiunTujuan - stasiunAwal) + 1;
     
     double biayaTiket = hitungBiayaTiket(jumlahStasiun);
@@ -64,5 +62,4 @@ int main() {
     cout << "Terima kasih telah menggunakan layanan kami!" << endl;
     
     return 0;
-
 }
