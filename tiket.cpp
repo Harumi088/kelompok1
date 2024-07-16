@@ -52,4 +52,17 @@ int main() {
         cout << "Stasiun yang anda tuju tidak ada." << endl;
         return 1;
     }
+
+        // Menghitung jumlah stasiun yang dilewati termasuk stasiun awal
+    int jumlahStasiun = abs(stasiunTujuan - stasiunAwal) + 1;
+    
+    double biayaTiket = hitungBiayaTiket(jumlahStasiun);
+    
+    cout << "Biaya tiket dari stasiun " << stasiunAwal << " ke stasiun " << stasiunTujuan << " adalah: Rp" << biayaTiket << endl;
+    
+    // Mengucapkan terima kasih
+    cout << "Terima kasih telah menggunakan layanan kami!" << endl;
+    
+    return 0;
+
 }
